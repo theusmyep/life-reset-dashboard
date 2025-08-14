@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Métricas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Análise de Desempenho</h1>
+            <div id="error-container" class="error-message"></div>
+            <div class="filters">
+                <button class="active">Hoje</button>
+                <button>Ontem</button>
+                <button>7 dias</button>
+                <button>14 dias</button>
+                <button>30 dias</button>
+            </div>
+        </header>
+        <main>
+            <div class="metrics-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span>Leads - Rd Station</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="leads-rd-station">--</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>Custo por Lead - Rd Station</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="cpl-rd-station">R$ --</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>Leads - Meta Ads</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="leads-meta-ads">--</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>Custo por Lead - Meta Ads</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="cpl-meta-ads">R$ --</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>Leads Anúncios</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="leads-anuncios">--</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>Leads - Instagram</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="leads-instagram">--</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span>Investimento Total</span>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="investimento-total">R$ --</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart-card">
+                    <h3>Leads x Custo por Lead (RD Station)</h3>
+                    <div class="chart-container">
+                        <canvas id="leadsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
