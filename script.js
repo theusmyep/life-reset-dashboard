@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const DATA_FILE = 'data.json';
+    const DATA_FILE = 'https://lifereset.netlify.app/data.json'; // Usando a URL completa e absoluta
     const errorContainer = document.getElementById('error-container');
     let allData = [];
 
