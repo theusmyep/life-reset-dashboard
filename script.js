@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const DATA_FILE = 'data.json'; // Usando o arquivo local
+    const DATA_FILE = 'data.json';
     const errorContainer = document.getElementById('error-container');
     let allData = [];
 
@@ -12,62 +12,72 @@ document.addEventListener('DOMContentLoaded', () => {
         errorContainer.style.display = 'none';
     }
 
-    // Lógica de processamento de dados
     function processDataForPeriod(period) {
         hideError();
-        const endDate = new Date();
-        const startDate = new Date();
+        
+        // --- Lógica para os Cards ---
+        const cardEndDate = new Date();
+        const cardStartDate = new Date();
 
         if (period === 'yesterday') {
-            startDate.setDate(endDate.getDate() - 1);
-            endDate.setDate(endDate.getDate() - 1);
+            cardStartDate.setDate(cardEndDate.getDate() - 1);
+            cardEndDate.setDate(cardEndDate.getDate() - 1);
         } else {
-            startDate.setDate(endDate.getDate() - (parseInt(period, 10) - 1));
+            cardStartDate.setDate(cardEndDate.getDate() - (parseInt(period, 10) - 1));
         }
         
-        endDate.setHours(23, 59, 59, 999);
-        startDate.setHours(0, 0, 0, 0);
+        cardEndDate.setHours(23, 59, 59, 999);
+        cardStartDate.setHours(0, 0, 0, 0);
 
-        const filteredData = allData.filter(item => {
+        const cardFilteredData = allData.filter(item => {
             const dateParts = item.data.split('/');
             if (dateParts.length !== 3) return false;
             const rowDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
-            return rowDate >= startDate && rowDate <= endDate;
+            return rowDate >= cardStartDate && rowDate <= cardEndDate;
         });
 
-        if (filteredData.length === 0) {
+        if (cardFilteredData.length === 0) {
             const periodText = period === 'yesterday' ? 'ontem' : `nos últimos ${period} dia(s)`;
             showError(`Nenhum dado encontrado para ${periodText}.`);
             updateDashboard(null);
-            updateChart([]);
-            return;
+        } else {
+            const totals = cardFilteredData.reduce((acc, item) => {
+                acc.leads_rd += item.leads_rd || 0;
+                acc.cpl_rd_sum += item.cpl_rd || 0;
+                if (item.cpl_rd > 0) acc.cpl_rd_count++;
+                acc.leads_meta += item.leads_meta || 0;
+                acc.cpl_meta_sum += item.cpl_meta || 0;
+                if (item.cpl_meta > 0) acc.cpl_meta_count++;
+                acc.leads_anuncios += item.leads_anuncios || 0;
+                acc.leads_instagram += item.leads_instagram || 0;
+                acc.investimento_total += item.investimento_total || 0;
+                return acc;
+            }, {
+                leads_rd: 0, cpl_rd_sum: 0, cpl_rd_count: 0,
+                leads_meta: 0, cpl_meta_sum: 0, cpl_meta_count: 0,
+                leads_anuncios: 0, leads_instagram: 0, investimento_total: 0
+            });
+
+            totals.cpl_rd = totals.cpl_rd_count > 0 ? totals.cpl_rd_sum / totals.cpl_rd_count : 0;
+            totals.cpl_meta = totals.cpl_meta_count > 0 ? totals.cpl_meta_sum / totals.cpl_meta_count : 0;
+            updateDashboard(totals);
         }
 
-        // Para períodos maiores, somamos os totais e calculamos a MÉDIA do CPL.
-        const totals = filteredData.reduce((acc, item) => {
-            acc.leads_rd += item.leads_rd || 0;
-            acc.cpl_rd_sum += item.cpl_rd || 0;
-            if (item.cpl_rd > 0) acc.cpl_rd_count++;
+        // --- Lógica para o Gráfico (Sempre últimos 7 dias) ---
+        const chartEndDate = new Date();
+        const chartStartDate = new Date();
+        chartStartDate.setDate(chartEndDate.getDate() - 6);
+        chartEndDate.setHours(23, 59, 59, 999);
+        chartStartDate.setHours(0, 0, 0, 0);
 
-            acc.leads_meta += item.leads_meta || 0;
-            acc.cpl_meta_sum += item.cpl_meta || 0;
-            if (item.cpl_meta > 0) acc.cpl_meta_count++;
-
-            acc.leads_anuncios += item.leads_anuncios || 0;
-            acc.leads_instagram += item.leads_instagram || 0;
-            acc.investimento_total += item.investimento_total || 0;
-            return acc;
-        }, {
-            leads_rd: 0, cpl_rd_sum: 0, cpl_rd_count: 0,
-            leads_meta: 0, cpl_meta_sum: 0, cpl_meta_count: 0,
-            leads_anuncios: 0, leads_instagram: 0, investimento_total: 0
+        const chartFilteredData = allData.filter(item => {
+            const dateParts = item.data.split('/');
+            if (dateParts.length !== 3) return false;
+            const rowDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+            return rowDate >= chartStartDate && rowDate <= chartEndDate;
         });
-
-        totals.cpl_rd = totals.cpl_rd_count > 0 ? totals.cpl_rd_sum / totals.cpl_rd_count : 0;
-        totals.cpl_meta = totals.cpl_meta_count > 0 ? totals.cpl_meta_sum / totals.cpl_meta_count : 0;
         
-        updateDashboard(totals);
-        updateChart(filteredData);
+        updateChart(chartFilteredData);
     }
 
     function updateDashboard(data) {

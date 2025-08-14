@@ -1,16 +1,9 @@
 [
-  { "data": "01/08/2025", "leads_rd": 30, "cpl_rd": 0.32, "leads_meta": 0, "cpl_meta": 0, "leads_anuncios": 0, "leads_instagram": 0, "investimento_total": 9.74 },
-  { "data": "02/08/2025", "leads_rd": 103, "cpl_rd": 0.46, "leads_meta": 0, "cpl_meta": 0, "leads_anuncios": 0, "leads_instagram": 0, "investimento_total": 46.94 },
-  { "data": "03/08/2025", "leads_rd": 80, "cpl_rd": 0.29, "leads_meta": 0, "cpl_meta": 0, "leads_anuncios": 0, "leads_instagram": 0, "investimento_total": 22.80 },
-  { "data": "04/08/2025", "leads_rd": 42, "cpl_rd": 0.02, "leads_meta": 0, "cpl_meta": 0, "leads_anuncios": 0, "leads_instagram": 0, "investimento_total": 0.69 },
-  { "data": "05/08/2025", "leads_rd": 20, "cpl_rd": 5.28, "leads_meta": 13, "cpl_meta": 8.12, "leads_anuncios": 1, "leads_instagram": 0, "investimento_total": 105.54 },
-  { "data": "06/08/2025", "leads_rd": 241, "cpl_rd": 1.40, "leads_meta": 420, "cpl_meta": 0.80, "leads_anuncios": 10, "leads_instagram": 1, "investimento_total": 336.50 },
-  { "data": "07/08/2025", "leads_rd": 315, "cpl_rd": 2.04, "leads_meta": 814, "cpl_meta": 0.81, "leads_anuncios": 187, "leads_instagram": 2, "investimento_total": 641.12 },
   { "data": "08/08/2025", "leads_rd": 293, "cpl_rd": 2.10, "leads_meta": 695, "cpl_meta": 0.92, "leads_anuncios": 312, "leads_instagram": 28, "investimento_total": 616.50 },
   { "data": "09/08/2025", "leads_rd": 384, "cpl_rd": 2.00, "leads_meta": 832, "cpl_meta": 0.94, "leads_anuncios": 413, "leads_instagram": 30, "investimento_total": 769.69 },
   { "data": "10/08/2025", "leads_rd": 290, "cpl_rd": 2.61, "leads_meta": 687, "cpl_meta": 1.15, "leads_anuncios": 280, "leads_instagram": 21, "investimento_total": 755.99 },
   { "data": "11/08/2025", "leads_rd": 427, "cpl_rd": 2.40, "leads_meta": 918, "cpl_meta": 1.18, "leads_anuncios": 393, "leads_instagram": 40, "investimento_total": 1023.72 },
   { "data": "12/08/2025", "leads_rd": 468, "cpl_rd": 3.00, "leads_meta": 1057, "cpl_meta": 1.38, "leads_anuncios": 438, "leads_instagram": 36, "investimento_total": 1403.31 },
-  { "data": "13/08/2025", "leads_rd": 873, "cpl_rd": 1.25, "leads_meta": 654, "cpl_meta": 1.67, "leads_anuncios": 330, "leads_instagram": 585, "investimento_total": 1047.68 },
+  { "data": "13/08/2025", "leads_rd": 998, "cpl_rd": 1.37, "leads_meta": 807, "cpl_meta": 1.75, "leads_anuncios": 415, "leads_instagram": 644, "investimento_total": 1369.75 },
   { "data": "14/08/2025", "leads_rd": 950, "cpl_rd": 1.15, "leads_meta": 720, "cpl_meta": 1.55, "leads_anuncios": 400, "leads_instagram": 610, "investimento_total": 1200.50 }
 ]
