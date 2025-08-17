@@ -1,13 +1,13 @@
 [
   {
     "data": "",
-    "leads_rd": 12797,
+    "leads_rd": 12800,
     "cpl_rd": 0.03090923981242983,
-    "leads_meta": 7413,
+    "leads_meta": 7414,
     "cpl_meta": 0,
-    "leads_anuncios": 3488,
-    "leads_instagram": 1063,
-    "investimento_total": 11416.250000000002
+    "leads_anuncios": 3492,
+    "leads_instagram": 1064,
+    "investimento_total": 11428.320000000002
   },
   {
     "data": "DIA",
@@ -395,7 +395,7 @@
     "cpl_rd": 2.0353015873015874,
     "leads_meta": 814,
     "cpl_meta": 0.81,
-    "leads_anuncios": 206,
+    "leads_anuncios": 207,
     "leads_instagram": 3,
     "investimento_total": 641.12
   },
@@ -405,7 +405,7 @@
     "cpl_rd": 2.1040955631399316,
     "leads_meta": 695,
     "cpl_meta": 0.92,
-    "leads_anuncios": 323,
+    "leads_anuncios": 324,
     "leads_instagram": 28,
     "investimento_total": 616.5
   },
@@ -491,13 +491,13 @@
   },
   {
     "data": "17/08/2025",
-    "leads_rd": 16,
-    "cpl_rd": 0,
-    "leads_meta": 0,
-    "cpl_meta": 0,
-    "leads_anuncios": 12,
-    "leads_instagram": 5,
-    "investimento_total": 0
+    "leads_rd": 19,
+    "cpl_rd": 0.6352631578947369,
+    "leads_meta": 1,
+    "cpl_meta": 12.07,
+    "leads_anuncios": 14,
+    "leads_instagram": 6,
+    "investimento_total": 12.07
   },
   {
     "data": "18/08/2025",
