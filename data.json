@@ -1,12 +1,12 @@
 [
   {
     "data": "",
-    "leads_rd": 32086,
+    "leads_rd": 32087,
     "cpl_rd": 71.96186139027122,
     "leads_meta": 28047,
     "cpl_meta": 33.68828571428571,
     "leads_anuncios": 17603,
-    "leads_instagram": 6882,
+    "leads_instagram": 6883,
     "investimento_total": 146398.78999999998
   },
   {
@@ -941,12 +941,12 @@
   },
   {
     "data": "01/10/2025",
-    "leads_rd": 0,
+    "leads_rd": 1,
     "cpl_rd": 0,
     "leads_meta": 0,
     "cpl_meta": 0,
     "leads_anuncios": 0,
-    "leads_instagram": 0,
+    "leads_instagram": 1,
     "investimento_total": 0
   },
   {
