@@ -1,7 +1,7 @@
 [
   {
     "data": "",
-    "leads_rd": 32099,
+    "leads_rd": 32101,
     "cpl_rd": 71.96163335490691,
     "leads_meta": 28047,
     "cpl_meta": 33.68828571428571,
@@ -961,7 +961,7 @@
   },
   {
     "data": "03/10/2025",
-    "leads_rd": 3,
+    "leads_rd": 5,
     "cpl_rd": 0,
     "leads_meta": 0,
     "cpl_meta": 0,
